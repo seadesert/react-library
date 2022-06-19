@@ -1,0 +1,61 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .reader
+    {
+        font-size: medium;
+        grid-template-columns: 95vw 0 0;
+        grid-template-rows: 100vh;
+        align-self: start;
+    }
+    
+}
+  
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .reader
+    {
+        font-size: large;
+        grid-template-columns: 80vw 0 0;
+        grid-template-rows: 100vh;
+    }
+}
+  
+@media only screen and (min-width: 992px) and (max-width: 1492px) {
+    .reader
+    {
+        font-size: large;
+        grid-template-columns: 70vw 0 0;
+        grid-template-rows: 100vh;
+    }
+}
+  
+@media only screen and (min-width: 1492px) and (max-width: 1692px) {
+    .reader
+    {
+        font-size: large;
+        grid-template-columns: 40vw 1px 40vw;
+        grid-template-rows: 100vh;
+    }
+    #page-border
+    {
+        border-left: 1px solid grey;
+        border-image : linear-gradient(transparent, grey, transparent) 1;
+        height: 90vh;
+    }
+}
+  
+  
+@media only screen and (min-width: 1692px) {
+    .reader
+    {
+        font-size: large;
+        grid-template-columns: 30vw 1px 30vw;
+        grid-template-rows: 100vw;
+    }
+    #page-border
+    {
+        border-left: 1px solid grey;
+        border-image : linear-gradient(transparent, grey, transparent) 1;
+        height: 90vh;
+    }
+}
+  
