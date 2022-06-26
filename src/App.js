@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   const theming = {
-    'dark': {'primary': '#42a5f5', 'secondary': '#ab47bc', 'error': '#e57373', 'sucess': '#81c784',
-            'info': '#4fc3f7', 'background': '#262626', 'text': '#fff'},
-    'light': {'primary': '#e3f2fd', 'secondary': '#f3e5f5', 'error': '#d32f2f', 'sucess': '#388e3c',
-            'info': '#0288d1', 'background': '#FBFBFB', 'text': '#000'}
+    'dark': {'primary': '#F46036', 'secondary': '#2E294E', 'error': '#E71D36', 'sucess': '#1B998B',
+            'info': '#C5D86D', 'background': '#262626', 'text': '#fff'},
+    'light': {'primary': '#FBC1B1', 'secondary': '#C0BCDC', 'error': '#F5A3AB', 'sucess': '#74E7D9',
+            'info': '#DFEAAE', 'background': '#FBFBFB', 'text': '#000'}
   };
   const [theme, setTheme] = useState(theming['dark']);
   const swapTheme = () => {
@@ -32,7 +32,8 @@ function App() {
 
   return (
     <Router>
-      <button onClick={swapTheme} id="theme" style={{'backgroundColor': theme['primary'], 'color': theme['text'], 'fontSize': '16pt'}}>☀</button>
+      <button onClick={swapTheme} className='floating-panel' id="theme" style={{'backgroundColor': theme['primary'], 'color': theme['text'], 'fontSize': '16pt'}}>☀</button>
+
       <Routes>
         <Route path="/" element={Library(theme)}/>
         <Route path="/reader" element={Reader(theme)}/>
